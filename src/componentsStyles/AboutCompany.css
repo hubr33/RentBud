@@ -1,0 +1,143 @@
+section.companyWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 100px);
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+section.companyWrapper aside {
+  position: relative;
+  width: 30%;
+  height: 80%;
+  border-radius: 20px;
+  box-shadow: 2px 2px 7px black;
+  background-color: white;
+  font-family: "Lato", sans-serif;
+}
+
+section.companyWrapper aside .informationAboutCompany {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+section.companyWrapper aside h2 {
+  position: absolute;
+  width: 70%;
+  left: 50%;
+  top: 10%;
+  border-radius: 10px;
+  transform: translateX(-50%);
+  color: #f5b71a;
+  text-align: center;
+}
+
+section.companyWrapper aside p {
+  position: absolute;
+  width: 90%;
+  height: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10%;
+  box-sizing: border-box;
+  padding: 30px 40px;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: justify;
+  text-justify: inter-word;
+  background-color: transparent;
+}
+
+section.companyWrapper aside p strong {
+  right: 0;
+}
+
+section.companyWrapper div.location {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 60%;
+  height: 80%;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 2px 2px 7px black;
+}
+section.companyWrapper div.location h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  width: 100%;
+  color: #f5b71a;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+section.companyWrapper div.location div {
+  width: 96%;
+  height: 84%;
+  margin: 0 auto;
+  background-image: url("../componentsStyles/trasa.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+
+@media (max-width: 1280px) {
+  section.companyWrapper {
+    flex-direction: column;
+  }
+  section.companyWrapper aside {
+    width: 80%;
+    height: 70%;
+    margin: 20px 0 40px 0;
+  }
+  section.companyWrapper div.location {
+    width: 80%;
+  }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+  section.companyWrapper {
+    height: 130vh;
+  }
+  section.companyWrapper aside {
+    height: 120vh;
+  }
+
+  section.companyWrapper div.location {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  section.companyWrapper {
+    min-height: 100vh;
+  }
+  section.companyWrapper aside {
+    display: flex;
+    width: 96%;
+    min-height: 70vh;
+  }
+  section.companyWrapper aside p {
+    width: 100%;
+  }
+  section.companyWrapper div.location {
+    display: none;
+  }
+}
+
+@media (max-width: 370px) and (orientation: portrait) {
+  section.companyWrapper {
+    min-height: 115vh;
+  }
+  section.companyWrapper aside {
+    width: 96%;
+  }
+  section.companyWrapper aside p {
+    padding: 10px 10px;
+  }
+}

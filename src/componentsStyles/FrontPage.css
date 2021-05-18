@@ -1,0 +1,591 @@
+main {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 100px);
+}
+
+main div.sentMessage {
+  position: fixed;
+  top: -180px;
+  right: 50px;
+  width: 500px;
+  height: 140px;
+  border-radius: 16px;
+  box-shadow: 2px 2px 6px black;
+  background-color: white;
+  color: #f4a514;
+  z-index: 1;
+  transition: 1s linear;
+}
+
+main div.sentMessage.active {
+  top: 20px;
+}
+
+main div.sentMessage p:nth-child(1) {
+  font-size: 28px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+main div.sentMessage p:nth-child(2) {
+  color: rgb(73, 73, 202);
+  font-size: 24px;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  animation: lulu 30s infinite;
+}
+
+@keyframes lulu {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+    background-image: url("slider1.jpg");
+    left: 0;
+  }
+
+  33% {
+    background-image: url("slider1.jpg");
+    opacity: 1;
+  }
+
+  34% {
+    opacity: 0;
+  }
+
+  35% {
+    opacity: 1;
+    background-image: url("slider2.jpg");
+  }
+
+  67% {
+    opacity: 1;
+    background-image: url("slider2.jpg");
+  }
+
+  68% {
+    opacity: 0;
+  }
+
+  69% {
+    opacity: 1;
+    background-image: url("slider3.jpg");
+  }
+
+  99% {
+    background-image: url("slider3.jpg");
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+main .square {
+  position: relative;
+  width: 550px;
+  height: 500px;
+  transform: skew(20deg);
+  margin-left: 10%;
+  background-color: rgba(244, 166, 20, 0.6);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+main .square h2 {
+  position: absolute;
+  transform: skew(-20deg);
+  font-size: 40px;
+  color: white;
+  width: 80%;
+  left: 10%;
+  top: 16%;
+  text-transform: uppercase;
+  font-family: "Noto Sans JP", sans-serif;
+  opacity: 1;
+}
+
+main .square .checkInfoBtn {
+  color: white;
+  font-size: 30px;
+  background-color: transparent;
+  border: 3px solid white;
+  padding: 10px 30px;
+  outline: none;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  z-index: 1;
+}
+
+main .square .checkInfoBtn .checkUs {
+  text-decoration: none;
+  text-transform: none;
+  color: white;
+  transition: 0.2 linear;
+}
+
+main .square .checkInfoBtn .checkUs p {
+  transform: skew(-20deg);
+}
+
+main .square .checkInfoBtn:hover .checkUs {
+  color: #f4a514;
+}
+
+main .square .checkInfoBtn:hover {
+  cursor: pointer;
+}
+
+.checkInfoBtn:after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 300px;
+  left: -320px;
+  height: 100px;
+  transform: translateY(-50%);
+  background: white;
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.checkInfoBtn:hover::after {
+  left: -20px;
+}
+
+.aboutCompany {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+}
+
+.aboutCompany .contactUs .contactImg {
+  width: 50%;
+  height: 20%;
+}
+
+.aboutCompany .contactUs {
+  display: flex;
+  flex-basis: 1;
+  position: absolute;
+  width: 90%;
+  height: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.aboutCompany .contactUs .contactImg {
+  width: 22%;
+  height: 100%;
+  background-image: url("builder.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.aboutCompany .contactUs .contactPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 60%;
+  height: 100%;
+}
+
+.aboutCompany .contactUs .contactPanel p {
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #f5b71a;
+  font-family: "Dela Gothic One", cursive;
+}
+
+.aboutCompany .contactUs .contactPanel p i {
+  margin-right: 20px;
+  font-size: 24px;
+}
+
+.aboutCompany .contactUs .contactPanel p:nth-child(2) {
+  color: #df281d;
+  font-size: 26px;
+}
+
+.aboutCompany .contactUs .contactPanel p:nth-child(4) {
+  color: #df281d;
+  font-size: 16px;
+}
+
+.aboutCompany .contactUs .contactPanel input {
+  width: 50%;
+  height: 40px;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px black;
+  text-align: center;
+  background-color: rgba(0, 255, 0, 0.1);
+}
+
+.aboutCompany .contactUs .contactInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  width: 30%;
+  flex-grow: 1;
+  font-size: 36px;
+  font-family: "Dela Gothic One", cursive;
+}
+
+.aboutCompany .contactUs .contactInfo p {
+  width: 0;
+  height: 0;
+  border-top: 50px solid #f5b71a;
+  border-right: 50px solid transparent;
+}
+
+.connectorsAndNews {
+  display: flex;
+  width: 100%;
+  height: 80vh;
+}
+
+.connectorsAndNews .building {
+  width: 35%;
+  height: 100%;
+  color: white;
+  background-image: url("./buildingBackground.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(0.5);
+  overflow: hidden;
+}
+
+.connectorsAndNews .building .buildingNote {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: "Lato", sans-serif;
+  background-color: rgba(0, 175, 0, 0.2);
+  transition: 0.3s linear;
+}
+
+.connectorsAndNews .building .buildingNote:hover {
+  background-color: rgba(0, 175, 0, 0.1);
+}
+
+.connectorsAndNews .building .buildingNote p {
+  width: 100%;
+  top: 20%;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 34px;
+}
+
+.connectorsAndNews .building .buildingNote h2 {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  top: 26%;
+  font-size: 44px;
+}
+
+.connectorsAndNews .building .buildingNote .buildingBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  padding: 9px 24px;
+  border-radius: 9px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: 0.1s linear;
+}
+
+.connectorsAndNews .building .buildingNote .buildingBtn:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.connectorsAndNews .gardening {
+  width: 35%;
+  height: 100%;
+  color: white;
+  background-image: url("./gardeningBackground.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(0.5);
+  overflow: hidden;
+}
+
+.connectorsAndNews .gardening .gardeningNote {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: "Lato", sans-serif;
+  background-color: rgba(0, 175, 0, 0.2);
+  transition: 0.4s linear;
+}
+.connectorsAndNews .gardening .gardeningNote:hover {
+  background-color: rgba(0, 175, 0, 0.1);
+}
+
+.connectorsAndNews .gardening .gardeningNote p {
+  width: 100%;
+  top: 20%;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 34px;
+}
+
+.connectorsAndNews .gardening .gardeningNote h2 {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  top: 26%;
+  font-size: 44px;
+}
+
+.connectorsAndNews .gardening .gardeningNote .gardeningBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  padding: 9px 24px;
+  border-radius: 9px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: 0.1s linear;
+}
+
+.connectorsAndNews .gardening .gardeningNote .gardeningBtn:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.connectorsAndNews .news {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 30%;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.connectorsAndNews .news .newsHeader {
+  position: relative;
+  transform: skew(20deg);
+  background-color: rgba(244, 166, 20, 0.7);
+  width: 80%;
+  margin: 0 auto;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+  letter-spacing: 2px;
+  overflow: hidden;
+}
+
+.connectorsAndNews .news .newsHeader h2 {
+  position: absolute;
+  transform: skew(-20deg) translate(-50%);
+  left: 50%;
+  color: white;
+}
+
+.connectorsAndNews .news .newsHeader h2::before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: white;
+  /* transform: translate(-50%);
+  transform: skew(-20deg); */
+}
+
+.connectorsAndNews .news .newsNote {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.connectorsAndNews .news .newsNote .noteContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.02);
+  width: 100%;
+  height: 100px;
+  font-size: 20px;
+  padding: 8px 6px;
+}
+.connectorsAndNews .news .newsNote .noteContainer p {
+  width: 100%;
+  margin: 0 auto;
+  color: #dd2e24;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .connectorsAndNews {
+    flex-direction: column;
+    height: 200vh;
+    overflow: hidden;
+  }
+  .connectorsAndNews .building {
+    width: 100%;
+    height: 100%;
+  }
+  .connectorsAndNews .gardening {
+    width: 100%;
+  }
+  .connectorsAndNews .news {
+    width: 100%;
+  }
+  .aboutCompany {
+    height: 100vh;
+  }
+  .aboutCompany .contactUs {
+    flex-direction: column;
+  }
+  .aboutCompany .contactUs .contactImg {
+    display: none;
+  }
+  .aboutCompany .contactUs .contactPanel {
+    width: 100%;
+  }
+  .aboutCompany .contactUs .contactInfo {
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .aboutCompany .contactUs .contactInfo div {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 750px) {
+  main {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  .aboutCompany {
+    height: 100vh;
+  }
+  .aboutCompany .contactUs .contactPanel {
+    text-align: center;
+  }
+  .aboutCompany .contactUs .contactPanel p {
+    font-size: 18px;
+  }
+  .aboutCompany .contactUs .contactPanel p:nth-child(2),
+  .aboutCompany .contactUs .contactPanel p:nth-child(4) {
+    color: green;
+    font-size: 10px;
+  }
+  .connectorsAndNews .news .newsNote .noteContainer {
+    font-size: 16px;
+  }
+  .aboutCompany .contactUs .contactInfo {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 420px) and (orientation: portrait) {
+  .aboutCompany {
+    height: 140vh;
+  }
+  .connectorsAndNews .building .buildingNote p,
+  .connectorsAndNews .gardening .gardeningNote p {
+    font-size: 20px;
+  }
+  .connectorsAndNews .building .buildingNote h2,
+  .connectorsAndNews .gardening .gardeningNote h2 {
+    font-size: 28px;
+  }
+  .connectorsAndNews .news .newsNote .noteContainer {
+    font-size: 14px;
+  }
+
+  .aboutCompany .contactUs .contactPanel p {
+    padding: 10px 0;
+  }
+  .aboutCompany .contactUs .contactPanel p:nth-child(2),
+  .aboutCompany .contactUs .contactPanel p:nth-child(4) {
+    color: green;
+    font-size: 8px;
+  }
+  .aboutCompany .contactUs .contactPanel p:nth-child(2) {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+  .connectorsAndNews {
+    flex-direction: column;
+    height: 400vh;
+    overflow: hidden;
+  }
+  .aboutCompany {
+    height: 340vh;
+  }
+}

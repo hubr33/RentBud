@@ -1,0 +1,18 @@
+.buildRentButton {
+  display: flex;
+  font-size: 16px;
+  padding: 0 20px;
+  text-transform: uppercase;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s linear;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+
+.buildRentButton:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.18);
+}

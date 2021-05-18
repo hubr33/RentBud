@@ -1,0 +1,162 @@
+header {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  font-family: "Lato", sans-serif;
+}
+
+header .firmName {
+  width: 30%;
+  height: 100%;
+}
+
+header .firmName h2 {
+  font-size: 32px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 10px;
+  color: #df281d;
+}
+
+header .firmName h3 {
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+  margin-left: 26px;
+  color: #f4a514;
+}
+
+header .info {
+  width: 70%;
+  height: 100%;
+}
+
+header .info .hours {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 40%;
+  background-color: rgb(245, 245, 245);
+  box-shadow: 1px 1px 3px black;
+  border-end-start-radius: 50px;
+  border-end-end-radius: 50px;
+}
+
+header .info .hours .currentDate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header .info .navButtons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+}
+
+header .info .navButtons .navBtn {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+  font-size: 18px;
+  padding: 6px 18px;
+}
+
+header .info .navButtons .navBtn:hover {
+  font-weight: bold;
+  color: #f4a514;
+}
+
+@media (max-width: 1200px) {
+  header {
+    flex-direction: column;
+    height: 200px;
+  }
+  header .firmName {
+    width: 100%;
+    text-align: center;
+  }
+
+  header .info {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) and (orientation: portrait) {
+  header {
+    height: 500px;
+  }
+  header .firmName {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+  }
+  header .firmName h2,
+  header .firmName h3 {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  header .info .hours {
+    margin-top: 10px;
+    flex-direction: column;
+    border-end-start-radius: 0;
+    border-end-end-radius: 0;
+  }
+  header .info .navButtons {
+    flex-direction: column;
+    margin-top: 10px;
+    height: 60%;
+    overflow: hidden;
+  }
+  header .info .navButtons .navBtn {
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 6px;
+    background-color: rgb(245, 245, 245);
+  }
+  header .info .navButtons .navBtn:last-child {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+  header {
+    height: 500px;
+  }
+  header .firmName {
+    width: 100%;
+    height: 20%;
+  }
+  header .info .hours {
+    margin-top: 10px;
+    flex-direction: column;
+    border-end-start-radius: 0;
+    border-end-end-radius: 0;
+  }
+  header .info .navButtons {
+    flex-direction: column;
+    margin-top: 10px;
+    height: 60%;
+    overflow: hidden;
+  }
+  header .info .navButtons .navBtn {
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 6px;
+    background-color: rgb(245, 245, 245);
+  }
+  header .info .navButtons .navBtn:last-child {
+    margin-bottom: 30px;
+  }
+}
